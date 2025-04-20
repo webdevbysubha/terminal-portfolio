@@ -127,8 +127,9 @@ if [ "$user_choice" == "1" ]; then
   type "🧪 Intern – CodSoft & Octanet"
 
   echo -e "\n${CYAN}━━━━━━━━━━ Connect with Me ━━━━━━━━━━${RESET}"
+  type "🌐 Website: https://portfoliosubha.vercel.app"
   type "🔗 GitHub: https://github.com/webdevbysubha"
-  type "🔗 LinkedIn: https://linkedin.com/in/subha-mondal10"
+  type "🧑‍💼 LinkedIn: https://linkedin.com/in/subha-mondal10"
   type "🎬 YouTube: https://www.youtube.com/@subhamondal3.0"
 
   echo -e "\n${CYAN}━━━━━━━━━━━ Quote of the Day ━━━━━━━━━━━${RESET}"
@@ -170,6 +171,7 @@ elif [ "$user_choice" == "2" ]; then
         echo -e "${MAGENTA}💼 Role:${RESET} ${WHITE}Full-Stack Developer | Tech Enthusiast | CSE Student"
         echo -e "${MAGENTA}📱 Device:${RESET} ${WHITE}Redmi Note 11 Pro"
         echo -e "${MAGENTA}📍 Location:${RESET} ${WHITE}Kolkata, India"
+        echo ""
         ;;
       2)
         echo ""
@@ -177,6 +179,7 @@ elif [ "$user_choice" == "2" ]; then
         type "💻 MERN Stack (MongoDB, Express, React, Node.js)"
         type "🎨 HTML, CSS, JavaScript, Tailwind, Figma, Photoshop"
         type "🧠 C, Java, SQL, Bash, Git & GitHub"
+        echo ""
         ;;
       3)
         echo ""
@@ -186,6 +189,7 @@ elif [ "$user_choice" == "2" ]; then
         type "🧠 Virtual Assistant – Rosie"
         type "💼 Job Board Website"
         type "⚙️ Electronics Hub – Logic Gate Visualizer"
+        echo ""
         ;;
       4)
         echo ""
@@ -195,6 +199,7 @@ elif [ "$user_choice" == "2" ]; then
         type "🎨 Cover Designer – Kuhutan Publishers"
         type "🥉 3rd in GDG RCCIIT Portfolio Contest"
         type "📽️ DSA Videos on YouTube"
+        echo ""
         ;;
       5)
         echo ""
@@ -202,6 +207,7 @@ elif [ "$user_choice" == "2" ]; then
         type "🧑‍💻 Campus Ambassador – DevTown, LetsUpgrade"
         type "👨‍💻 Contributor – GSSOC Extended 2024"
         type "🧪 Intern – CodSoft & Octanet"
+        echo ""
         ;;
       6)
         echo ""
@@ -209,6 +215,7 @@ elif [ "$user_choice" == "2" ]; then
         type "🔗 GitHub: https://github.com/webdevbysubha"
         type "🔗 LinkedIn: https://linkedin.com/in/subha-mondal10"
         type "🎬 YouTube: https://www.youtube.com/@subhamondal3.0"
+        echo ""
         ;;
       7)
         echo ""
@@ -220,6 +227,7 @@ elif [ "$user_choice" == "2" ]; then
         )
         RANDOM_QUOTE=${quotes[$RANDOM % ${#quotes[@]}]}
         echo -e "\n${ORANGE}💬 Quote of the Day: ${WHITE}$RANDOM_QUOTE${RESET}"
+        echo ""
         ;;
       8)
         echo ""
@@ -230,6 +238,7 @@ elif [ "$user_choice" == "2" ]; then
       *)
         echo ""
         echo -e "${RED}❌ Invalid choice. Try again.${RESET}"
+        echo ""
         ;;
     esac
   done
