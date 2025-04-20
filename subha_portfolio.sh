@@ -44,7 +44,7 @@ echo ""
 
 if command -v figlet >/dev/null 2>&1; then
   echo -e "${CYAN}"
-  figlet "Subha Mondal"
+  figlet "Subha  Mondal"
   echo -e "${RESET}"
 else
   type "🔔 Tip: Install figlet for better banners: sudo apt install figlet"
