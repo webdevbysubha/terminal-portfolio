@@ -42,6 +42,27 @@ echo ""
 rainbow_type "✨ Welcome to Subha Mondal's Terminal Portfolio ✨"
 echo ""
 
+# ─── Coder ASCII Art ──────────────────────────────────────────
+echo -e "${GREEN}"
+cat << "EOF"
+          ( •_•)
+         <)   )╯  💻 Typing some epic code...
+         /   \   
+
+     ._________________________.
+    |  _____________________  |
+    | |                     | |
+    | |   subha_portfolio   | |
+    | |  $ ./start.sh       | |
+    | |                     | |
+    | |_____________________| |
+    |_________________________|
+EOF
+echo -e "${RESET}"
+sleep 1
+
+echo ""
+
 if command -v figlet >/dev/null 2>&1; then
   echo -e "${CYAN}"
   figlet "Subha Mondal"
