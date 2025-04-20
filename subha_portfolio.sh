@@ -9,6 +9,10 @@ MAGENTA='\033[0;35m'
 CYAN='\033[0;36m'
 WHITE='\033[1;37m'
 BOLD='\033[1m'
+BRIGHT_GREEN='\033[1;32m'
+BRIGHT_BLUE='\033[1;34m'
+BRIGHT_RED='\033[1;31m'
+ORANGE='\033[38;5;208m'
 RESET='\033[0m'
 
 # ─── Rainbow Typing ───────────────────────────
@@ -166,7 +170,7 @@ elif [ "$user_choice" == "2" ]; then
     case $menu_choice in
       1)
         echo ""
-        echo -e "\n${BOLD}${BRIGHT_BLUE}🧑‍💻 Personal Info${RESET}"
+        echo -e "\n${BOLD}${ORANGE}🧑‍💻 Personal Info${RESET}"
         echo -e "\n${BOLD}${BRIGHT_GREEN}🧑 Name:${RESET} ${WHITE}Subha Mondal"
         echo -e "${BRIGHT_GREEN}🎓 Education:${RESET} ${WHITE}B.Tech in CSE at RCC-IIT (MAKAUT)"
         echo -e "${BRIGHT_GREEN}💼 Role:${RESET} ${WHITE}Full-Stack Developer | Tech Enthusiast | CSE Student"
@@ -194,7 +198,7 @@ elif [ "$user_choice" == "2" ]; then
         ;;
       4)
         echo ""
-        echo -e "\n${BOLD}${YELLOW}🏆 Achievements:${RESET}"
+        echo -e "\n${BOLD}${BRIGHT_RED}🏆 Achievements:${RESET}"
         type "📗 Editor – 'Monkotha' at Kolkata Book Fair"
         type "📘 Co-Editor – 'The Whisper of Quill'"
         type "🎨 Cover Designer – Kuhutan Publishers"
