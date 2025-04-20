@@ -151,7 +151,6 @@ elif [ "$user_choice" == "2" ]; then
   show_menu_ascii
   echo ""
   while true; do
-    echo -e "\n${BOLD}${BLUE}📂 MENU:${RESET}"
     echo -e "${CYAN}1) Personal Info"
     echo -e "2) Skills"
     echo -e "3) Projects"
