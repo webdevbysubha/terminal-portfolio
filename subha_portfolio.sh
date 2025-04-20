@@ -158,7 +158,8 @@ elif [ "$user_choice" == "2" ]; then
     echo -e "5) Roles"
     echo -e "6) Contact Info"
     echo -e "7) Quote of the Day"
-    echo -e "0) Exit${RESET}"
+    echo -e "8) Exit${RESET}"
+    echo ""
     read -p "$(echo -e ${PINK}"> Choose an option: ${RESET}")" menu_choice
 
     case $menu_choice in
@@ -213,8 +214,10 @@ elif [ "$user_choice" == "2" ]; then
         RANDOM_QUOTE=${quotes[$RANDOM % ${#quotes[@]}]}
         echo -e "\n${CYAN}💬 Quote of the Day: ${WHITE}$RANDOM_QUOTE${RESET}"
         ;;
-      0)
+      8)
+        echo ""
         echo -e "${YELLOW}👋 Thank you for exploring the menu!${RESET}"
+        echo ""
         break
         ;;
       *)
