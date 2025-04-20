@@ -1,121 +1,116 @@
 #!/bin/bash
 
-# ─── Color Codes ─────────────────────────────────────────────────────
-RED='\033[1;31m'; GREEN='\033[1;32m'; YELLOW='\033[1;33m'
-BLUE='\033[1;34m'; MAGENTA='\033[1;35m'; CYAN='\033[1;36m'
-WHITE='\033[1;97m'; BOLD='\033[1m'; RESET='\033[0m'
-rainbow=($RED $YELLOW $GREEN $CYAN $BLUE $MAGENTA)
+# ─── Color Codes ──────────────────────────────
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\033[1;37m'
+BOLD='\033[1m'
+RESET='\033[0m'
 
-# ─── Typing Effect ───────────────────────────────────────────────────
-type() {
-  text="$1"; delay="${2:-0.01}"
-  for ((i=0; i<${#text}; i++)); do
-    echo -ne "${text:$i:1}"
-    sleep $delay
-  done
-  echo ""
-}
-
-# ─── Rainbow Text ────────────────────────────────────────────────────
+# ─── Rainbow Typing ───────────────────────────
 rainbow_type() {
-  text="$1"; delay="${2:-0.02}"
-  for ((i=0; i<${#text}; i++)); do
-    color=${rainbow[i % ${#rainbow[@]}]}
-    echo -ne "${color}${text:$i:1}${RESET}"
-    sleep $delay
-  done
-  echo ""
+    text="$1"
+    colors=($RED $YELLOW $GREEN $CYAN $BLUE $MAGENTA)
+    for (( i=0; i<${#text}; i++ )); do
+        color=${colors[$((i % ${#colors[@]}))]}
+        echo -ne "${color}${text:$i:1}${RESET}"
+        sleep 0.05
+    done
+    echo
 }
 
-# ─── Progress Bar ────────────────────────────────────────────────────
-progress_bar() {
-  echo -ne "${YELLOW}🔄 Loading: ["
-  for i in {1..30}; do echo -ne "#"; sleep 0.02; done
-  echo -e "] Done!${RESET}"
+# ─── Simple Typing ────────────────────────────
+type() {
+    text="$1"
+    for (( i=0; i<${#text}; i++ )); do
+        echo -ne "${WHITE}${text:$i:1}${RESET}"
+        sleep 0.01
+    done
+    echo
 }
 
-# ─── ASCII Art ───────────────────────────────────────────────────────
-show_ascii_art() {
-  echo -e "${GREEN}"
-  cat << "EOF"
-           _________________________________
-          /                                /|
-         /________________________________/ |
-        |    ___________________________   | |
-        |   |                           |  | |
-        |   |  subha@dev:~$             |  | |
-        |   |---------------------------|  | |
-        |   |  Full-Stack Developer 🚀  |  | |
-        |   |  MERN | DevOps | OSS 💡   |  | |
-        |   |  Building with Passion ❤️ |  | |
-        |   |___________________________|  | |
-        |__________________________________|/
-         \________________________________/
-                  ||           ||
-               ___||___________||____
-              |______________________|
-              | [ESC] [F1] [F2]...   |
-              | [ Q ] [ W ] [ E ]... | 
-              | [ A ] [ S ] [ D ]... |
-              |    [   Space   ]     |
-              '---------------------'
-
-          ( •_•)
-         <)   )╯  💻 Just coding some dreams....
-         /   \  
+# ─── ASCII Art: Full Portfolio ────────────────
+show_full_ascii() {
+cat << "EOF"
+   ______            _        _     _             
+  |  ____|          | |      | |   (_)            
+  | |__  __  ___ __ | | ___  | |__  _ _ __   __ _ 
+  |  __| \ \/ / '_ \| |/ _ \ | '_ \| | '_ \ / _` |
+  | |____ >  <| |_) | |  __/ | | | | | | | | (_| |
+  |______/_/\_\ .__/|_|\___| |_| |_|_|_| |_|\__, |
+             | |                            __/ |
+             |_|                           |___/ 
 EOF
-  echo -e "${RESET}"
 }
 
-# ─── Menu Functions ──────────────────────────────────────────────────
-personal_info() {
-  echo -e "\n${BOLD}${MAGENTA}🧑 Name:${RESET} ${WHITE}Subha Mondal"
+# ─── ASCII Art: Menu-Based ────────────────────
+show_menu_ascii() {
+cat << "EOF"
+ __  __                                      
+|  \/  |                                    
+| \  / | ___ _ __ ___   ___  _ __ ___   ___ 
+| |\/| |/ _ \ '_ ` _ \ / _ \| '_ ` _ \ / _ \
+| |  | |  __/ | | | | | (_) | | | | | |  __/
+|_|  |_|\___|_| |_| |_|\___/|_| |_| |_|\___|
+                                            
+EOF
+}
+
+# ─── User Choice Prompt ───────────────────────
+echo -e "${CYAN}${BOLD}How would you like to view the portfolio?${RESET}"
+echo -e "${YELLOW}1) Show complete portfolio at once"
+echo -e "2) Explore via interactive menu${RESET}"
+read -p "$(echo -e ${MAGENTA}"> Your choice (1 or 2): ${RESET}")" user_choice
+
+# ─── Option 1: Full Portfolio ─────────────────
+if [ "$user_choice" == "1" ]; then
+  echo ""
+  show_full_ascii
+  echo ""
+  rainbow_type "✨ Welcome to Subha Mondal's Terminal Portfolio ✨"
+  echo ""
+
+  echo -e "${CYAN}━━━━━━━━━━━━━ Personal Info ━━━━━━━━━━━━━${RESET}"
+  echo -e "${BOLD}${MAGENTA}🧑 Name:${RESET} ${WHITE}Subha Mondal"
   echo -e "${MAGENTA}🎓 Education:${RESET} ${WHITE}B.Tech in CSE at RCC-IIT (MAKAUT)"
   echo -e "${MAGENTA}💼 Role:${RESET} ${WHITE}Full-Stack Developer | Tech Enthusiast | CSE Student"
   echo -e "${MAGENTA}📱 Device:${RESET} ${WHITE}Redmi Note 11 Pro"
   echo -e "${MAGENTA}📍 Location:${RESET} ${WHITE}Kolkata, India"
-}
 
-skills() {
-  echo -e "\n${BOLD}${CYAN}🛠️ Skills:${RESET}"
+  echo -e "\n${CYAN}━━━━━━━━━━━━━ Skills ━━━━━━━━━━━━━${RESET}"
   type "💻 MERN Stack (MongoDB, Express, React, Node.js)"
   type "🎨 HTML, CSS, JavaScript, Tailwind, Figma, Photoshop"
   type "🧠 C, Java, SQL, Bash, Git & GitHub"
-}
 
-projects() {
-  echo -e "\n${BOLD}${GREEN}🚀 Projects:${RESET}"
+  echo -e "\n${CYAN}━━━━━━━━━━━━━ Projects ━━━━━━━━━━━━━${RESET}"
   type "🔗 Full Stack LMS"
   type "🔍 GitHub Profile Finder"
   type "🧠 Virtual Assistant – Rosie"
   type "💼 Job Board Website"
   type "⚙️ Electronics Hub – Logic Gate Visualizer"
-}
 
-achievements() {
-  echo -e "\n${BOLD}${YELLOW}🏆 Achievements:${RESET}"
+  echo -e "\n${CYAN}━━━━━━━━━━━━ Achievements ━━━━━━━━━━━━${RESET}"
   type "📗 Editor – 'Monkotha' at Kolkata Book Fair"
   type "📘 Co-Editor – 'The Whisper of Quill'"
   type "🎨 Cover Designer – Kuhutan Publishers"
   type "🥉 3rd in GDG RCCIIT Portfolio Contest"
   type "📽️ DSA Videos on YouTube"
-}
 
-roles() {
-  echo -e "\n${BOLD}${BLUE}🤝 Roles:${RESET}"
+  echo -e "\n${CYAN}━━━━━━━━━━━━━━ Roles ━━━━━━━━━━━━━━━${RESET}"
   type "🧑‍💻 Campus Ambassador – DevTown, LetsUpgrade"
   type "👨‍💻 Contributor – GSSOC Extended 2024"
   type "🧪 Intern – CodSoft & Octanet"
-}
 
-social_links() {
-  echo -e "\n${BOLD}${MAGENTA}🌐 Connect:${RESET}"
+  echo -e "\n${CYAN}━━━━━━━━━━ Connect with Me ━━━━━━━━━━${RESET}"
   type "🔗 GitHub: https://github.com/webdevbysubha"
   type "🔗 LinkedIn: https://linkedin.com/in/subha-mondal10"
   type "🎬 YouTube: https://www.youtube.com/@subhamondal3.0"
-}
 
-quote() {
+  echo -e "\n${CYAN}━━━━━━━━━━━ Quote of the Day ━━━━━━━━━━━${RESET}"
   quotes=(
     "Keep pushing code, greatness awaits 💻"
     "Bug-free is a myth. Ship anyway 🚀"
@@ -123,45 +118,92 @@ quote() {
     "Every line of code is a brushstroke in your masterpiece 🎨"
   )
   RANDOM_QUOTE=${quotes[$RANDOM % ${#quotes[@]}]}
-  echo -e "\n${CYAN}💬 Quote of the Day: ${WHITE}$RANDOM_QUOTE${RESET}"
-}
+  echo -e "${WHITE}$RANDOM_QUOTE${RESET}"
 
-# ─── Main Program ────────────────────────────────────────────────────
-clear
-rainbow_type "✨ Welcome to Subha Mondal's Terminal Portfolio ✨"
-show_ascii_art
+  echo -e "\n${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo -e "${MAGENTA} 🎉 Thank you for checking out my terminal portfolio! 🎉"
+  echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}"
 
-if command -v figlet >/dev/null 2>&1; then
-  echo -e "${CYAN}"; figlet "Subha Mondal"; echo -e "${RESET}"
+# ─── Option 2: Menu-Based ─────────────────────
+elif [ "$user_choice" == "2" ]; then
+  echo ""
+  show_menu_ascii
+  echo ""
+  while true; do
+    echo -e "\n${BOLD}${BLUE}📂 MENU:${RESET}"
+    echo -e "${CYAN}1) Personal Info"
+    echo -e "2) Skills"
+    echo -e "3) Projects"
+    echo -e "4) Achievements"
+    echo -e "5) Roles"
+    echo -e "6) Contact Info"
+    echo -e "7) Quote of the Day"
+    echo -e "0) Exit${RESET}"
+    read -p "$(echo -e ${MAGENTA}"> Choose an option: ${RESET}")" menu_choice
+
+    case $menu_choice in
+      1)
+        echo -e "\n${BOLD}${MAGENTA}🧑 Name:${RESET} ${WHITE}Subha Mondal"
+        echo -e "${MAGENTA}🎓 Education:${RESET} ${WHITE}B.Tech in CSE at RCC-IIT (MAKAUT)"
+        echo -e "${MAGENTA}💼 Role:${RESET} ${WHITE}Full-Stack Developer | Tech Enthusiast | CSE Student"
+        echo -e "${MAGENTA}📱 Device:${RESET} ${WHITE}Redmi Note 11 Pro"
+        echo -e "${MAGENTA}📍 Location:${RESET} ${WHITE}Kolkata, India"
+        ;;
+      2)
+        echo -e "\n${BOLD}${CYAN}🛠️ Skills:${RESET}"
+        type "💻 MERN Stack (MongoDB, Express, React, Node.js)"
+        type "🎨 HTML, CSS, JavaScript, Tailwind, Figma, Photoshop"
+        type "🧠 C, Java, SQL, Bash, Git & GitHub"
+        ;;
+      3)
+        echo -e "\n${BOLD}${GREEN}🚀 Projects:${RESET}"
+        type "🔗 Full Stack LMS"
+        type "🔍 GitHub Profile Finder"
+        type "🧠 Virtual Assistant – Rosie"
+        type "💼 Job Board Website"
+        type "⚙️ Electronics Hub – Logic Gate Visualizer"
+        ;;
+      4)
+        echo -e "\n${BOLD}${YELLOW}🏆 Achievements:${RESET}"
+        type "📗 Editor – 'Monkotha' at Kolkata Book Fair"
+        type "📘 Co-Editor – 'The Whisper of Quill'"
+        type "🎨 Cover Designer – Kuhutan Publishers"
+        type "🥉 3rd in GDG RCCIIT Portfolio Contest"
+        type "📽️ DSA Videos on YouTube"
+        ;;
+      5)
+        echo -e "\n${BOLD}${BLUE}🤝 Roles:${RESET}"
+        type "🧑‍💻 Campus Ambassador – DevTown, LetsUpgrade"
+        type "👨‍💻 Contributor – GSSOC Extended 2024"
+        type "🧪 Intern – CodSoft & Octanet"
+        ;;
+      6)
+        echo -e "\n${BOLD}${MAGENTA}🌐 Connect:${RESET}"
+        type "🔗 GitHub: https://github.com/webdevbysubha"
+        type "🔗 LinkedIn: https://linkedin.com/in/subha-mondal10"
+        type "🎬 YouTube: https://www.youtube.com/@subhamondal3.0"
+        ;;
+      7)
+        quotes=(
+          "Keep pushing code, greatness awaits 💻"
+          "Bug-free is a myth. Ship anyway 🚀"
+          "Stay curious, keep building 🛠️"
+          "Every line of code is a brushstroke in your masterpiece 🎨"
+        )
+        RANDOM_QUOTE=${quotes[$RANDOM % ${#quotes[@]}]}
+        echo -e "\n${CYAN}💬 Quote of the Day: ${WHITE}$RANDOM_QUOTE${RESET}"
+        ;;
+      0)
+        echo -e "${YELLOW}👋 Thank you for exploring the menu!${RESET}"
+        break
+        ;;
+      *)
+        echo -e "${RED}❌ Invalid choice. Try again.${RESET}"
+        ;;
+    esac
+  done
+
+# ─── Invalid Input ────────────────────────────
 else
-  type "🔔 Tip: Install figlet for better banners: sudo apt install figlet"
+  echo -e "${RED}⚠️ Invalid input. Please run the script again and choose 1 or 2.${RESET}"
 fi
-
-progress_bar
-
-while true; do
-  echo -e "\n${BOLD}${YELLOW}📜 MENU:${RESET}"
-  echo -e "${BOLD}${WHITE}1.${RESET} View Personal Info"
-  echo -e "${BOLD}${WHITE}2.${RESET} View Skills"
-  echo -e "${BOLD}${WHITE}3.${RESET} View Projects"
-  echo -e "${BOLD}${WHITE}4.${RESET} View Achievements"
-  echo -e "${BOLD}${WHITE}5.${RESET} View Roles"
-  echo -e "${BOLD}${WHITE}6.${RESET} View Social Links"
-  echo -e "${BOLD}${WHITE}7.${RESET} Quote of the Day"
-  echo -e "${BOLD}${WHITE}8.${RESET} Exit"
-
-  echo -ne "${CYAN}\nEnter your choice (1-8): ${RESET}"
-  read choice
-
-  case $choice in
-    1) personal_info ;;
-    2) skills ;;
-    3) projects ;;
-    4) achievements ;;
-    5) roles ;;
-    6) social_links ;;
-    7) quote ;;
-    8) echo -e "${MAGENTA}\n👋 Thank you for visiting! Keep coding dreams alive. 💻${RESET}"; break ;;
-    *) echo -e "${RED}❌ Invalid option. Please choose between 1 and 8.${RESET}" ;;
-  esac
-done
