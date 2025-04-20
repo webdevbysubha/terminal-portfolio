@@ -127,8 +127,8 @@ if [ "$user_choice" == "1" ]; then
   type "📽️ DSA Videos on YouTube"
 
   echo -e "\n${BRIGHT_GREEN}━━━━━━━━━━━━━━ Roles ━━━━━━━━━━━━━━━${RESET}"
-  type "🧑‍💻 Campus Ambassador – DevTown, LetsUpgrade"
-  type "👨‍💻 Contributor – GSSOC Extended 2024"
+  type "🎓 Campus Ambassador – DevTown, LetsUpgrade"
+  type "🛂 Contributor – GSSOC Extended 2024"
   type "🧪 Intern – CodSoft & Octanet"
 
   echo -e "\n${PINK}━━━━━━━━━━ Connect with Me ━━━━━━━━━━${RESET}"
@@ -171,7 +171,7 @@ elif [ "$user_choice" == "2" ]; then
     case $menu_choice in
       1)
         echo ""
-        echo -e "\n${BOLD}${ORANGE}🧑‍💻 Personal Info${RESET}"
+        echo -e "\n${BOLD}${ORANGE}🙎‍♂️ Personal Info${RESET}"
         echo -e "\n${BOLD}${BRIGHT_GREEN}🧑 Name:${RESET} ${WHITE}Subha Mondal"
         echo -e "${BRIGHT_GREEN}🎓 Education:${RESET} ${WHITE}B.Tech in CSE at RCC-IIT (MAKAUT)"
         echo -e "${BRIGHT_GREEN}💼 Role:${RESET} ${WHITE}Full-Stack Developer | Tech Enthusiast | CSE Student"
@@ -210,9 +210,9 @@ elif [ "$user_choice" == "2" ]; then
       5)
         echo ""
         echo -e "\n${BOLD}${BRIGHT_BLUE}🤝 Roles:${RESET}"
-        type "🧑‍💻 Campus Ambassador – DevTown, LetsUpgrade"
-        type "👨‍💻 Contributor – GSSOC Extended 2024"
-        type "🧪 Intern – CodSoft & Octanet"
+        type "🎓 Campus Ambassador – DevTown, LetsUpgrade"
+        type "🛂 Contributor – GSSOC Extended 2024"
+        type "🧑‍🏫 Intern – CodSoft & Octanet"
         echo ""
         ;;
       6)
@@ -220,7 +220,7 @@ elif [ "$user_choice" == "2" ]; then
         echo -e "\n${BOLD}${ORANGE}🌐 Connect:${RESET}"
         type "🌐 Website: https://portfoliosubha.vercel.app"
         type "🔗 GitHub: https://github.com/webdevbysubha"
-        type "🔗 LinkedIn: https://linkedin.com/in/subha-mondal10"
+        type "🧑‍💼 LinkedIn: https://linkedin.com/in/subha-mondal10"
         type "🎬 YouTube: https://www.youtube.com/@subhamondal3.0"
         echo ""
         ;;
