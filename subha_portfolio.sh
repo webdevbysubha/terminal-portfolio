@@ -212,6 +212,7 @@ elif [ "$user_choice" == "2" ]; then
       6)
         echo ""
         echo -e "\n${BOLD}${MAGENTA}🌐 Connect:${RESET}"
+        type "🌐 Website: https://portfoliosubha.vercel.app"
         type "🔗 GitHub: https://github.com/webdevbysubha"
         type "🔗 LinkedIn: https://linkedin.com/in/subha-mondal10"
         type "🎬 YouTube: https://www.youtube.com/@subhamondal3.0"
@@ -226,7 +227,7 @@ elif [ "$user_choice" == "2" ]; then
           "Every line of code is a brushstroke in your masterpiece 🎨"
         )
         RANDOM_QUOTE=${quotes[$RANDOM % ${#quotes[@]}]}
-        echo -e "\n${ORANGE}💬 Quote of the Day: ${WHITE}$RANDOM_QUOTE${RESET}"
+        echo -e "\n${RED}💬 Quote of the Day: ${WHITE}$RANDOM_QUOTE${RESET}"
         echo ""
         ;;
       8)
