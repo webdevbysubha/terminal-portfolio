@@ -164,6 +164,7 @@ elif [ "$user_choice" == "2" ]; then
 
     case $menu_choice in
       1)
+        echo ""
         echo -e "\n${BOLD}${MAGENTA}🧑 Name:${RESET} ${WHITE}Subha Mondal"
         echo -e "${MAGENTA}🎓 Education:${RESET} ${WHITE}B.Tech in CSE at RCC-IIT (MAKAUT)"
         echo -e "${MAGENTA}💼 Role:${RESET} ${WHITE}Full-Stack Developer | Tech Enthusiast | CSE Student"
@@ -171,12 +172,14 @@ elif [ "$user_choice" == "2" ]; then
         echo -e "${MAGENTA}📍 Location:${RESET} ${WHITE}Kolkata, India"
         ;;
       2)
+        echo ""
         echo -e "\n${BOLD}${CYAN}🛠️ Skills:${RESET}"
         type "💻 MERN Stack (MongoDB, Express, React, Node.js)"
         type "🎨 HTML, CSS, JavaScript, Tailwind, Figma, Photoshop"
         type "🧠 C, Java, SQL, Bash, Git & GitHub"
         ;;
       3)
+        echo ""
         echo -e "\n${BOLD}${GREEN}🚀 Projects:${RESET}"
         type "🔗 Full Stack LMS"
         type "🔍 GitHub Profile Finder"
@@ -185,6 +188,7 @@ elif [ "$user_choice" == "2" ]; then
         type "⚙️ Electronics Hub – Logic Gate Visualizer"
         ;;
       4)
+        echo ""
         echo -e "\n${BOLD}${YELLOW}🏆 Achievements:${RESET}"
         type "📗 Editor – 'Monkotha' at Kolkata Book Fair"
         type "📘 Co-Editor – 'The Whisper of Quill'"
@@ -193,18 +197,21 @@ elif [ "$user_choice" == "2" ]; then
         type "📽️ DSA Videos on YouTube"
         ;;
       5)
+        echo ""
         echo -e "\n${BOLD}${BLUE}🤝 Roles:${RESET}"
         type "🧑‍💻 Campus Ambassador – DevTown, LetsUpgrade"
         type "👨‍💻 Contributor – GSSOC Extended 2024"
         type "🧪 Intern – CodSoft & Octanet"
         ;;
       6)
+        echo ""
         echo -e "\n${BOLD}${MAGENTA}🌐 Connect:${RESET}"
         type "🔗 GitHub: https://github.com/webdevbysubha"
         type "🔗 LinkedIn: https://linkedin.com/in/subha-mondal10"
         type "🎬 YouTube: https://www.youtube.com/@subhamondal3.0"
         ;;
       7)
+        echo ""
         quotes=(
           "Keep pushing code, greatness awaits 💻"
           "Bug-free is a myth. Ship anyway 🚀"
@@ -212,7 +219,7 @@ elif [ "$user_choice" == "2" ]; then
           "Every line of code is a brushstroke in your masterpiece 🎨"
         )
         RANDOM_QUOTE=${quotes[$RANDOM % ${#quotes[@]}]}
-        echo -e "\n${CYAN}💬 Quote of the Day: ${WHITE}$RANDOM_QUOTE${RESET}"
+        echo -e "\n${ORANGE}💬 Quote of the Day: ${WHITE}$RANDOM_QUOTE${RESET}"
         ;;
       8)
         echo ""
@@ -221,6 +228,7 @@ elif [ "$user_choice" == "2" ]; then
         break
         ;;
       *)
+        echo ""
         echo -e "${RED}❌ Invalid choice. Try again.${RESET}"
         ;;
     esac
