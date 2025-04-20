@@ -36,6 +36,11 @@ type() {
 # ─── ASCII Art: Full Portfolio ────────────────
 show_full_ascii() {
 cat << "EOF"
+
+echo ""
+  rainbow_type "✨ Welcome to Subha Mondal's Terminal Portfolio ✨"
+echo ""
+
            _________________________________
           /                                /|
          /________________________________/ |
@@ -89,10 +94,7 @@ read -p "$(echo -e ${MAGENTA}"> Your choice (1 or 2): ${RESET}")" user_choice
 if [ "$user_choice" == "1" ]; then
   echo ""
   show_full_ascii
-  echo ""
-  rainbow_type "✨ Welcome to Subha Mondal's Terminal Portfolio ✨"
-  echo ""
-
+  
   echo -e "${CYAN}━━━━━━━━━━━━━ Personal Info ━━━━━━━━━━━━━${RESET}"
   echo -e "${BOLD}${MAGENTA}🧑 Name:${RESET} ${WHITE}Subha Mondal"
   echo -e "${MAGENTA}🎓 Education:${RESET} ${WHITE}B.Tech in CSE at RCC-IIT (MAKAUT)"
