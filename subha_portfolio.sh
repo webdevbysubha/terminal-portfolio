@@ -131,13 +131,13 @@ if [ "$user_choice" == "1" ]; then
   type "👨‍💻 Contributor – GSSOC Extended 2024"
   type "🧪 Intern – CodSoft & Octanet"
 
-  echo -e "\n${MAGENTA}━━━━━━━━━━ Connect with Me ━━━━━━━━━━${RESET}"
+  echo -e "\n${PINK}━━━━━━━━━━ Connect with Me ━━━━━━━━━━${RESET}"
   type "🌐 Website: https://portfoliosubha.vercel.app"
   type "🔗 GitHub: https://github.com/webdevbysubha"
   type "🧑‍💼 LinkedIn: https://linkedin.com/in/subha-mondal10"
   type "🎬 YouTube: https://www.youtube.com/@subhamondal3.0"
 
-  echo -e "\n${RED}━━━━━━━━━━━ Quote of the Day ━━━━━━━━━━━${RESET}"
+  echo -e "\n${BRIGHT_RED}━━━━━━━━━━━ Quote of the Day ━━━━━━━━━━━${RESET}"
   quotes=(
     "Keep pushing code, greatness awaits 💻"
     "Bug-free is a myth. Ship anyway 🚀"
@@ -217,7 +217,7 @@ elif [ "$user_choice" == "2" ]; then
         ;;
       6)
         echo ""
-        echo -e "\n${BOLD}${PINK}🌐 Connect:${RESET}"
+        echo -e "\n${BOLD}${ORANGE}🌐 Connect:${RESET}"
         type "🌐 Website: https://portfoliosubha.vercel.app"
         type "🔗 GitHub: https://github.com/webdevbysubha"
         type "🔗 LinkedIn: https://linkedin.com/in/subha-mondal10"
