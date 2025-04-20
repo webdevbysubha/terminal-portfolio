@@ -13,6 +13,7 @@ BRIGHT_GREEN='\033[1;32m'
 BRIGHT_BLUE='\033[1;34m'
 BRIGHT_RED='\033[1;31m'
 ORANGE='\033[38;5;208m'
+PINK='\033[38;5;213m'
 RESET='\033[0m'
 
 # ─── Rainbow Typing ───────────────────────────
@@ -99,19 +100,19 @@ if [ "$user_choice" == "1" ]; then
   echo ""
   show_full_ascii
   echo ""
-  echo -e "${CYAN}━━━━━━━━━━━━━ Personal Info ━━━━━━━━━━━━━${RESET}"
-  echo -e "${BOLD}${MAGENTA}🧑 Name:${RESET} ${WHITE}Subha Mondal"
-  echo -e "${MAGENTA}🎓 Education:${RESET} ${WHITE}B.Tech in CSE at RCC-IIT (MAKAUT)"
-  echo -e "${MAGENTA}💼 Role:${RESET} ${WHITE}Full-Stack Developer | Tech Enthusiast | CSE Student"
-  echo -e "${MAGENTA}📱 Device:${RESET} ${WHITE}Redmi Note 11 Pro"
-  echo -e "${MAGENTA}📍 Location:${RESET} ${WHITE}Kolkata, India"
+  echo -e "${ORANGE}━━━━━━━━━━━━━ Personal Info ━━━━━━━━━━━━━${RESET}"
+  echo -e "\n${BOLD}${BRIGHT_GREEN}🧑 Name:${RESET} ${WHITE}Subha Mondal"
+        echo -e "${BRIGHT_GREEN}🎓 Education:${RESET} ${WHITE}B.Tech in CSE at RCC-IIT (MAKAUT)"
+        echo -e "${BRIGHT_GREEN}💼 Role:${RESET} ${WHITE}Full-Stack Developer | Tech Enthusiast | CSE Student"
+        echo -e "${BRIGHT_GREEN}📱 Device:${RESET} ${WHITE}Redmi Note 11 Pro"
+        echo -e "${BRIGHT_GREEN}📍 Location:${RESET} ${WHITE}Kolkata, India"
 
-  echo -e "\n${CYAN}━━━━━━━━━━━━━ Skills ━━━━━━━━━━━━━${RESET}"
+  echo -e "\n${RED}━━━━━━━━━━━━━ Skills ━━━━━━━━━━━━━${RESET}"
   type "💻 MERN Stack (MongoDB, Express, React, Node.js)"
   type "🎨 HTML, CSS, JavaScript, Tailwind, Figma, Photoshop"
   type "🧠 C, Java, SQL, Bash, Git & GitHub"
 
-  echo -e "\n${CYAN}━━━━━━━━━━━━━ Projects ━━━━━━━━━━━━━${RESET}"
+  echo -e "\n${PINK}━━━━━━━━━━━━━ Projects ━━━━━━━━━━━━━${RESET}"
   type "🔗 Full Stack LMS"
   type "🔍 GitHub Profile Finder"
   type "🧠 Virtual Assistant – Rosie"
@@ -125,18 +126,18 @@ if [ "$user_choice" == "1" ]; then
   type "🥉 3rd in GDG RCCIIT Portfolio Contest"
   type "📽️ DSA Videos on YouTube"
 
-  echo -e "\n${CYAN}━━━━━━━━━━━━━━ Roles ━━━━━━━━━━━━━━━${RESET}"
+  echo -e "\n${BRIGHT_GREEN}━━━━━━━━━━━━━━ Roles ━━━━━━━━━━━━━━━${RESET}"
   type "🧑‍💻 Campus Ambassador – DevTown, LetsUpgrade"
   type "👨‍💻 Contributor – GSSOC Extended 2024"
   type "🧪 Intern – CodSoft & Octanet"
 
-  echo -e "\n${CYAN}━━━━━━━━━━ Connect with Me ━━━━━━━━━━${RESET}"
+  echo -e "\n${MAGENTA}━━━━━━━━━━ Connect with Me ━━━━━━━━━━${RESET}"
   type "🌐 Website: https://portfoliosubha.vercel.app"
   type "🔗 GitHub: https://github.com/webdevbysubha"
   type "🧑‍💼 LinkedIn: https://linkedin.com/in/subha-mondal10"
   type "🎬 YouTube: https://www.youtube.com/@subhamondal3.0"
 
-  echo -e "\n${CYAN}━━━━━━━━━━━ Quote of the Day ━━━━━━━━━━━${RESET}"
+  echo -e "\n${RED}━━━━━━━━━━━ Quote of the Day ━━━━━━━━━━━${RESET}"
   quotes=(
     "Keep pushing code, greatness awaits 💻"
     "Bug-free is a myth. Ship anyway 🚀"
