@@ -35,6 +35,18 @@ progress_bar() {
   echo -e "] Done!${RESET}"
 }
 
+# ─── Banner Name ──────────────────────────────────────────────
+echo ""
+if command -v figlet >/dev/null 2>&1; then
+  echo -e "${CYAN}"
+  figlet "Subha Mondal"
+  echo -e "${RESET}"
+else
+  type "🔔 Tip: Install figlet for better banners: sudo apt install figlet"
+fi
+
+# ─── Welcome Message ──────────────────────────────────────────
+rainbow_type "✨ Welcome to Subha Mondal's Terminal Portfolio ✨"
 # ─── Coder ASCII Art ──────────────────────────────────────────
 echo -e "${GREEN}"
 cat << "EOF"
@@ -54,18 +66,6 @@ EOF
 echo -e "${RESET}"
 sleep 1
 
-# ─── Banner Name ──────────────────────────────────────────────
-echo ""
-if command -v figlet >/dev/null 2>&1; then
-  echo -e "${CYAN}"
-  figlet "Subha Mondal"
-  echo -e "${RESET}"
-else
-  type "🔔 Tip: Install figlet for better banners: sudo apt install figlet"
-fi
-
-# ─── Welcome Message ──────────────────────────────────────────
-rainbow_type "✨ Welcome to Subha Mondal's Terminal Portfolio ✨"
 progress_bar
 sleep 0.5
 
