@@ -166,16 +166,17 @@ elif [ "$user_choice" == "2" ]; then
     case $menu_choice in
       1)
         echo ""
-        echo -e "\n${BOLD}${MAGENTA}🧑 Name:${RESET} ${WHITE}Subha Mondal"
-        echo -e "${MAGENTA}🎓 Education:${RESET} ${WHITE}B.Tech in CSE at RCC-IIT (MAKAUT)"
-        echo -e "${MAGENTA}💼 Role:${RESET} ${WHITE}Full-Stack Developer | Tech Enthusiast | CSE Student"
-        echo -e "${MAGENTA}📱 Device:${RESET} ${WHITE}Redmi Note 11 Pro"
-        echo -e "${MAGENTA}📍 Location:${RESET} ${WHITE}Kolkata, India"
+        echo -e "\n${BOLD}${BRIGHT_BLUE}🧑‍💻 Personal Info${RESET}"
+        echo -e "\n${BOLD}${BRIGHT_GREEN}🧑 Name:${RESET} ${WHITE}Subha Mondal"
+        echo -e "${BRIGHT_GREEN}🎓 Education:${RESET} ${WHITE}B.Tech in CSE at RCC-IIT (MAKAUT)"
+        echo -e "${BRIGHT_GREEN}💼 Role:${RESET} ${WHITE}Full-Stack Developer | Tech Enthusiast | CSE Student"
+        echo -e "${BRIGHT_GREEN}📱 Device:${RESET} ${WHITE}Redmi Note 11 Pro"
+        echo -e "${BRIGHT_GREEN}📍 Location:${RESET} ${WHITE}Kolkata, India"
         echo ""
         ;;
       2)
         echo ""
-        echo -e "\n${BOLD}${CYAN}🛠️ Skills:${RESET}"
+        echo -e "\n${BOLD}${YELLOW}🛠️ Skills:${RESET}"
         type "💻 MERN Stack (MongoDB, Express, React, Node.js)"
         type "🎨 HTML, CSS, JavaScript, Tailwind, Figma, Photoshop"
         type "🧠 C, Java, SQL, Bash, Git & GitHub"
