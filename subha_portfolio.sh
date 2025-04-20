@@ -189,7 +189,7 @@ elif [ "$user_choice" == "2" ]; then
         ;;
       3)
         echo ""
-        echo -e "\n${BOLD}${GREEN}🚀 Projects:${RESET}"
+        echo -e "\n${BOLD}${BRIGHT_GREEN}🚀 Projects:${RESET}"
         type "🔗 Full Stack LMS"
         type "🔍 GitHub Profile Finder"
         type "🧠 Virtual Assistant – Rosie"
@@ -209,7 +209,7 @@ elif [ "$user_choice" == "2" ]; then
         ;;
       5)
         echo ""
-        echo -e "\n${BOLD}${BLUE}🤝 Roles:${RESET}"
+        echo -e "\n${BOLD}${BRIGHT_BLUE}🤝 Roles:${RESET}"
         type "🧑‍💻 Campus Ambassador – DevTown, LetsUpgrade"
         type "👨‍💻 Contributor – GSSOC Extended 2024"
         type "🧪 Intern – CodSoft & Octanet"
@@ -217,7 +217,7 @@ elif [ "$user_choice" == "2" ]; then
         ;;
       6)
         echo ""
-        echo -e "\n${BOLD}${MAGENTA}🌐 Connect:${RESET}"
+        echo -e "\n${BOLD}${PINK}🌐 Connect:${RESET}"
         type "🌐 Website: https://portfoliosubha.vercel.app"
         type "🔗 GitHub: https://github.com/webdevbysubha"
         type "🔗 LinkedIn: https://linkedin.com/in/subha-mondal10"
@@ -233,7 +233,7 @@ elif [ "$user_choice" == "2" ]; then
           "Every line of code is a brushstroke in your masterpiece 🎨"
         )
         RANDOM_QUOTE=${quotes[$RANDOM % ${#quotes[@]}]}
-        echo -e "\n${RED}💬 Quote of the Day: ${WHITE}$RANDOM_QUOTE${RESET}"
+        echo -e "\n${BRIGHT_RED}💬 Quote of the Day: ${WHITE}$RANDOM_QUOTE${RESET}"
         echo ""
         ;;
       8)
