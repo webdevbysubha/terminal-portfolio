@@ -60,9 +60,9 @@ echo ""
 
 # Basic Info
 echo -e "\n${BOLD}${MAGENTA}🧑 Name:${RESET} ${WHITE}Subha Mondal"
+echo -e "${MAGENTA}📱 Gender:${RESET} ${WHITE}Male"
 echo -e "${MAGENTA}🎓 Education:${RESET} ${WHITE}B.Tech in CSE at RCC-IIT (MAKAUT)"
 echo -e "${MAGENTA}💼 Role:${RESET} ${WHITE}Full-Stack Developer | Tech Enthusiast | CSE Student"
-echo -e "${MAGENTA}📱 Device:${RESET} ${WHITE}Redmi Note 11 Pro"
 echo -e "${MAGENTA}📍 Location:${RESET} ${WHITE}Kolkata, India"
 
 # Skills Section
@@ -81,7 +81,7 @@ type "⚙️ Electronics Hub – Logic Gate Visualizer"
 
 # Achievements
 echo -e "\n${BOLD}${YELLOW}🏆 Achievements:${RESET}"
-type "📗 Editor – 'মনকথা' at Kolkata Book Fair"
+type "📗 Editor – 'Monkotha' at Kolkata Book Fair"
 type "📘 Co-Editor – 'The Whisper of Quill'"
 type "🎨 Cover Designer – Kuhutan Publishers"
 type "🥉 3rd in GDG RCCIIT Portfolio Contest"
