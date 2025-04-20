@@ -36,34 +36,53 @@ type() {
 # ─── ASCII Art: Full Portfolio ────────────────
 show_full_ascii() {
 cat << "EOF"
-   ______            _        _     _             
-  |  ____|          | |      | |   (_)            
-  | |__  __  ___ __ | | ___  | |__  _ _ __   __ _ 
-  |  __| \ \/ / '_ \| |/ _ \ | '_ \| | '_ \ / _` |
-  | |____ >  <| |_) | |  __/ | | | | | | | | (_| |
-  |______/_/\_\ .__/|_|\___| |_| |_|_|_| |_|\__, |
-             | |                            __/ |
-             |_|                           |___/ 
+           _________________________________
+          /                                /|
+         /________________________________/ |
+        |    ___________________________   | |
+        |   |                           |  | |
+        |   |  subha@dev:~$             |  | |
+        |   |---------------------------|  | |
+        |   |  Full-Stack Developer 🚀  |  | |
+        |   |  MERN | DevOps | OSS 💡   |  | |
+        |   |  Building with Passion ❤️ |  | |
+        |   |___________________________|  | |
+        |__________________________________|/
+         \________________________________/
+                  ||           ||
+               ___||___________||____
+              |______________________|
+              | [ESC] [F1] [F2]...   |
+              | [ Q ] [ W ] [ E ]... | 
+              | [ A ] [ S ] [ D ]... |
+              |    [   Space   ]     |
+              '---------------------'
+
+          ( •_•)
+         <)   )╯  💻 Just coding some dreams....
+         /   \ 
 EOF
 }
 
 # ─── ASCII Art: Menu-Based ────────────────────
 show_menu_ascii() {
 cat << "EOF"
- __  __                                      
-|  \/  |                                    
-| \  / | ___ _ __ ___   ___  _ __ ___   ___ 
-| |\/| |/ _ \ '_ ` _ \ / _ \| '_ ` _ \ / _ \
-| |  | |  __/ | | | | | (_) | | | | | |  __/
-|_|  |_|\___|_| |_| |_|\___/|_| |_| |_|\___|
+ __  __ ______ _   _ _    _ 
+|  \/  |  ____| \ | | |  | |
+| \  / | |__  |  \| | |  | |
+| |\/| |  __| | . ` | |  | |
+| |  | | |____| |\  | |__| |
+|_|  |_|______|_| \_|\____/ 
                                             
 EOF
 }
 
 # ─── User Choice Prompt ───────────────────────
+echo ""
 echo -e "${CYAN}${BOLD}How would you like to view the portfolio?${RESET}"
 echo -e "${YELLOW}1) Show complete portfolio at once"
 echo -e "2) Explore via interactive menu${RESET}"
+echo ""
 read -p "$(echo -e ${MAGENTA}"> Your choice (1 or 2): ${RESET}")" user_choice
 
 # ─── Option 1: Full Portfolio ─────────────────
@@ -139,7 +158,7 @@ elif [ "$user_choice" == "2" ]; then
     echo -e "6) Contact Info"
     echo -e "7) Quote of the Day"
     echo -e "0) Exit${RESET}"
-    read -p "$(echo -e ${MAGENTA}"> Choose an option: ${RESET}")" menu_choice
+    read -p "$(echo -e ${PINK}"> Choose an option: ${RESET}")" menu_choice
 
     case $menu_choice in
       1)
